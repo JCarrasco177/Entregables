@@ -1,30 +1,38 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/esm/Container';
+import Card from 'react-bootstrap/Card';
 
 function Body() {
+    const cardStyles = {
+        width:500,
+        position:"relative"
+    }
   return (
-    <Container>
-        <Form>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Email address</Form.Label>
-            <Form.Control type="email" placeholder="Enter email" />
-            <Form.Text className="text-muted">
-                We'll never share your email with anyone else.
-            </Form.Text>
-            </Form.Group>
+    <Container style={{padding: 40}}>
+        <Card style={cardStyles}>
+        <Card.Header>Login</Card.Header>
+            <Card.Body>
+                <Card.Title>Acceso</Card.Title>
+                <Card.Text>
+                <Form>
+                    <Form.Group className="mb-3" controlId="usuario">
+                    <Form.Label>Usuario</Form.Label>
+                    <Form.Control type="text" placeholder="Ingrese Usuario" />
+                     </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label>Password</Form.Label>
-            <Form.Control type="password" placeholder="Password" />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicCheckbox">
-            <Form.Check type="checkbox" label="Check me out" />
-            </Form.Group>
-            <Button variant="primary" type="submit">
-            Submit
-            </Button>
-        </Form>
+                    <Form.Group className="mb-3" controlId="password">
+                    <Form.Label>Password</Form.Label>
+                    <Form.Control type="password" placeholder="Password" />
+                    </Form.Group>
+                    <Button variant="primary" type="submit">
+                    Acceder
+                    </Button>
+                </Form>
+                </Card.Text>
+            </Card.Body>
+        </Card>
+        
     </Container>
 
   );
