@@ -3,13 +3,13 @@ import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/esm/Container';
 import Card from 'react-bootstrap/Card';
 
-function Body() {
+function Login() {
     const cardStyles = {
         width:500,
         position:"relative"
     }
   return (
-    <Container style={{padding: 40}}>
+    <Container style={{padding: 40, width:500}}>
         <Card style={cardStyles}>
         <Card.Header>Login</Card.Header>
             <Card.Body>
@@ -38,4 +38,4 @@ function Body() {
   );
 }
 
-export default Body;
+export default Login;
