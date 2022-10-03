@@ -12,7 +12,7 @@ function App() {
     <NavBarCustom></NavBarCustom>
       <Routes>
         <Route index path="/" element={<Landing />} />
-        <Route path="login" element={<Login />} />
+        <Route path="login" element={<Login nombre="mi login" />} />
         <Route path="about" element={<About />} />
         <Route path="info" element={<Info />} />
         <Route path="register" element={<Register />} />
