@@ -3,7 +3,7 @@ import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/esm/Container';
 import Card from 'react-bootstrap/Card';
 import React from 'react'
-import { redirect } from "react-router-dom";
+
 class Login extends React.Component {
     constructor(props) {
         super(props);
@@ -42,7 +42,8 @@ class Login extends React.Component {
                 respuestaLogin:response
             })
             if(response.state){
-                redirect("/dashboard");
+                sessionStorage.setItem("userData",JSON.stringify(response))
+                window.location.href ="/dashboard";
             }
         }
         );
@@ -58,7 +59,7 @@ class Login extends React.Component {
                 <Card.Header>Login</Card.Header>
                     <Card.Body>
                         <Card.Title>Acceso</Card.Title>
-                        <Card.Text>
+                        <Card.Text as="div">
                         <Form onSubmit={this.handleSubmit}>
                             <Form.Group className="mb-3" controlId="usuario">
                             <Form.Label>Usuario</Form.Label>

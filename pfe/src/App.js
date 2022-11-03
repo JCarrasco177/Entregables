@@ -8,7 +8,7 @@ import Register from './componentes/register'
 import Dashboard from './componentes/dashboard'
 function App() {
   return (
-    <>
+    <div>
     <NavBarCustom></NavBarCustom>
       <Routes>
         <Route index path="/" element={<Landing />} />
@@ -19,7 +19,7 @@ function App() {
         <Route path="dashboard" element={<Dashboard />} />
       </Routes>
    
-    </>
+    </div>
     
   );
 }
